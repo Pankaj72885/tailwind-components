@@ -1,0 +1,98 @@
+/* Shadow Utilities */
+
+/* Glow Shadows */
+.shadow-glow {
+  box-shadow: var(--shadow-glow);
+}
+
+.shadow-glow-lg {
+  box-shadow: var(--shadow-glow-lg);
+}
+
+.shadow-glow-primary {
+  box-shadow: 0 0 20px rgb(59 130 246 / 0.5);
+}
+
+.shadow-glow-success {
+  box-shadow: 0 0 20px rgb(34 197 94 / 0.5);
+}
+
+.shadow-glow-danger {
+  box-shadow: 0 0 20px rgb(239 68 68 / 0.5);
+}
+
+.shadow-glow-warning {
+  box-shadow: 0 0 20px rgb(234 179 8 / 0.5);
+}
+
+.shadow-glow-info {
+  box-shadow: 0 0 20px rgb(6 182 212 / 0.5);
+}
+
+/* Inner Shadows */
+.shadow-inner-lg {
+  box-shadow: var(--shadow-inner-lg);
+}
+
+.shadow-inner-xl {
+  box-shadow: inset 0 8px 16px rgb(0 0 0 / 0.1);
+}
+
+/* Directional Shadows */
+.shadow-top {
+  box-shadow: 0 -4px 6px -1px rgb(0 0 0 / 0.1), 0 -2px 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-right {
+  box-shadow: 4px 0 6px -1px rgb(0 0 0 / 0.1), 2px 0 4px -2px rgb(0 0 0 / 0.1);
+}
+
+.shadow-left {
+  box-shadow: -4px 0 6px -1px rgb(0 0 0 / 0.1), -2px 0 4px -2px rgb(0 0 0 / 0.1);
+}
+
+/* Colored Shadows */
+.shadow-primary {
+  box-shadow: 0 4px 6px -1px rgb(59 130 246 / 0.2), 0 2px 4px -2px rgb(59 130 246 / 0.1);
+}
+
+.shadow-success {
+  box-shadow: 0 4px 6px -1px rgb(34 197 94 / 0.2), 0 2px 4px -2px rgb(34 197 94 / 0.1);
+}
+
+.shadow-danger {
+  box-shadow: 0 4px 6px -1px rgb(239 68 68 / 0.2), 0 2px 4px -2px rgb(239 68 68 / 0.1);
+}
+
+.shadow-warning {
+  box-shadow: 0 4px 6px -1px rgb(234 179 8 / 0.2), 0 2px 4px -2px rgb(234 179 8 / 0.1);
+}
+
+.shadow-info {
+  box-shadow: 0 4px 6px -1px rgb(6 182 212 / 0.2), 0 2px 4px -2px rgb(6 182 212 / 0.1);
+}
+
+/* Text Shadows */
+.text-shadow-sm {
+  text-shadow: var(--text-shadow-sm);
+}
+
+.text-shadow {
+  text-shadow: var(--text-shadow);
+}
+
+.text-shadow-md {
+  text-shadow: var(--text-shadow-md);
+}
+
+.text-shadow-lg {
+  text-shadow: var(--text-shadow-lg);
+}
+
+.text-shadow-xl {
+  text-shadow: var(--text-shadow-xl);
+}
+
+.text-shadow-none {
+  text-shadow: none;
+}

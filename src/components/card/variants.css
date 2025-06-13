@@ -1,0 +1,92 @@
+/* Card Variant Combinations */
+
+/* Horizontal Card */
+.card-horizontal {
+  @apply flex-row;
+  
+  .card-image {
+    @apply w-1/3 h-auto;
+  }
+  
+  .card-body {
+    @apply w-2/3;
+  }
+}
+
+/* Compact Card */
+.card-compact {
+  .card-body {
+    @apply p-3;
+  }
+  
+  .card-title {
+    @apply text-base mb-1;
+  }
+  
+  .card-text {
+    @apply text-xs;
+  }
+}
+
+/* Borderless Card */
+.card-borderless {
+  @apply border-0;
+  
+  .card-header,
+  .card-footer {
+    @apply border-0;
+  }
+}
+
+/* Gradient Card */
+.card-gradient {
+  @apply bg-gradient-to-br from-primary-500 to-primary-700 text-white;
+  
+  .card-title,
+  .card-text {
+    @apply text-white;
+  }
+  
+  .card-header,
+  .card-footer {
+    @apply border-white/20;
+  }
+}
+
+/* Glass Card */
+.card-glass {
+  @apply bg-white/80 backdrop-blur-md border-white/30;
+}
+
+/* Dark Card */
+.card-dark {
+  @apply bg-gray-800 text-white border-gray-700;
+  
+  .card-header,
+  .card-footer {
+    @apply border-gray-700;
+  }
+  
+  .card-title {
+    @apply text-white;
+  }
+  
+  .card-text {
+    @apply text-gray-300;
+  }
+}
+
+/* Animated Card */
+.card-animated {
+  @apply transition-all duration-300 transform hover:scale-105;
+}
+
+/* Card with Shadow Glow */
+.card-glow {
+  @apply shadow-glow;
+}
+
+/* Card with Inner Shadow */
+.card-inner-shadow {
+  @apply shadow-inner-lg;
+}

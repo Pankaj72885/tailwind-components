@@ -1,0 +1,81 @@
+.input {
+  @apply w-full px-3 py-2 text-sm border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-primary-500 transition-colors;
+  font-family: var(--font-family-component);
+}
+
+/* Input Variants */
+.input-default {
+  @apply border-gray-300;
+}
+
+.input-error {
+  @apply border-danger-500 focus:ring-danger-500 focus:border-danger-500;
+}
+
+.input-success {
+  @apply border-success-500 focus:ring-success-500 focus:border-success-500;
+}
+
+.input-warning {
+  @apply border-warning-500 focus:ring-warning-500 focus:border-warning-500;
+}
+
+.input-disabled,
+.input[disabled] {
+  @apply bg-gray-100 text-gray-500 cursor-not-allowed;
+}
+
+/* Input Sizes */
+.input-sm {
+  @apply px-2 py-1 text-xs rounded;
+}
+
+.input-md {
+  @apply px-3 py-2 text-sm rounded-md;
+}
+
+.input-lg {
+  @apply px-4 py-3 text-base rounded-md;
+}
+
+/* Input Group */
+.input-group {
+  @apply flex flex-col gap-1.5;
+}
+
+.input-label {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+.input-helper-text {
+  @apply mt-1 text-xs text-gray-500;
+}
+
+.input-with-icon {
+  @apply pl-10;
+}
+
+.input-icon {
+  @apply absolute left-3 top-1/2 -translate-y-1/2 text-gray-400;
+}
+
+.input-prefix {
+  @apply inline-flex items-center px-3 text-gray-500 bg-gray-100 border border-r-0 border-gray-300 rounded-l-md;
+}
+
+.input-suffix {
+  @apply inline-flex items-center px-3 text-gray-500 bg-gray-100 border border-l-0 border-gray-300 rounded-r-md;
+}
+
+/* Input States */
+.input-error ~ .input-helper-text {
+  @apply text-danger-600;
+}
+
+.input-success ~ .input-helper-text {
+  @apply text-success-600;
+}
+
+.input-warning ~ .input-helper-text {
+  @apply text-warning-600;
+}

@@ -1,0 +1,90 @@
+/* Modal Variant Combinations */
+
+/* Bottom Sheet Modal */
+.modal-bottom-sheet {
+  @apply items-end justify-center;
+  
+  .modal-container {
+    @apply rounded-b-none rounded-t-xl transform translate-y-full;
+  }
+  
+  &.modal-open .modal-container {
+    @apply translate-y-0;
+  }
+}
+
+/* Top Sheet Modal */
+.modal-top-sheet {
+  @apply items-start justify-center;
+  
+  .modal-container {
+    @apply rounded-t-none rounded-b-xl transform -translate-y-full;
+  }
+  
+  &.modal-open .modal-container {
+    @apply translate-y-0;
+  }
+}
+
+/* Right Drawer Modal */
+.modal-drawer-right {
+  @apply items-stretch justify-end;
+  
+  .modal-container {
+    @apply h-full w-80 max-w-sm rounded-l-lg rounded-r-none transform translate-x-full;
+  }
+  
+  &.modal-open .modal-container {
+    @apply translate-x-0;
+  }
+}
+
+/* Animated Modal */
+.modal-animated {
+  .modal-container {
+    animation: var(--animation-bounce-in);
+  }
+}
+
+/* Glass Modal */
+.modal-glass {
+  .modal-container {
+    @apply bg-white/80 backdrop-blur-md border border-white/30;
+  }
+}
+
+/* Dark Modal */
+.modal-dark {
+  .modal-container {
+    @apply bg-gray-800 text-white;
+  }
+  
+  .modal-header,
+  .modal-footer {
+    @apply border-gray-700;
+  }
+  
+  .modal-close {
+    @apply text-gray-400 hover:text-gray-300 hover:bg-gray-700;
+  }
+}
+
+/* Alert Modal */
+.modal-alert {
+  .modal-container {
+    @apply max-w-sm text-center;
+  }
+  
+  .modal-body {
+    @apply flex flex-col items-center;
+  }
+  
+  .modal-footer {
+    @apply justify-center;
+  }
+}
+
+/* Modal with Shadow Glow */
+.modal-glow .modal-container {
+  @apply shadow-glow;
+}

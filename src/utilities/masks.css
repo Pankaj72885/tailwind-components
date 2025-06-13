@@ -1,0 +1,93 @@
+/* Mask Utilities */
+
+/* Fade Masks */
+.mask-fade-r {
+  mask-image: linear-gradient(to right, black, transparent);
+}
+
+.mask-fade-l {
+  mask-image: linear-gradient(to left, black, transparent);
+}
+
+.mask-fade-t {
+  mask-image: linear-gradient(to top, black, transparent);
+}
+
+.mask-fade-b {
+  mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+/* Corner Masks */
+.mask-fade-tr {
+  mask-image: linear-gradient(to top right, transparent, black);
+}
+
+.mask-fade-tl {
+  mask-image: linear-gradient(to top left, transparent, black);
+}
+
+.mask-fade-br {
+  mask-image: linear-gradient(to bottom right, transparent, black);
+}
+
+.mask-fade-bl {
+  mask-image: linear-gradient(to bottom left, transparent, black);
+}
+
+/* Radial Masks */
+.mask-radial {
+  mask-image: radial-gradient(circle, black 50%, transparent 100%);
+}
+
+.mask-radial-sm {
+  mask-image: radial-gradient(circle, black 30%, transparent 100%);
+}
+
+.mask-radial-lg {
+  mask-image: radial-gradient(circle, black 70%, transparent 100%);
+}
+
+/* Shape Masks */
+.mask-star {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='black'%3E%3Cpath d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.mask-circle {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ccircle cx='50' cy='50' r='50' fill='black'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.mask-hexagon {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,0 93.3,25 93.3,75 50,100 6.7,75 6.7,25' fill='black'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+.mask-triangle {
+  mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Cpolygon points='50,0 100,100 0,100' fill='black'/%3E%3C/svg%3E");
+  mask-size: contain;
+  mask-repeat: no-repeat;
+  mask-position: center;
+}
+
+/* Pattern Masks */
+.mask-dots {
+  mask-image: radial-gradient(circle, black 25%, transparent 25%);
+  mask-size: 10px 10px;
+}
+
+.mask-stripes {
+  mask-image: linear-gradient(45deg, black 25%, transparent 25%, transparent 50%, black 50%, black 75%, transparent 75%, transparent);
+  mask-size: 10px 10px;
+}
+
+.mask-checkerboard {
+  mask-image: repeating-conic-gradient(black 0% 25%, transparent 0% 50%);
+  mask-size: 20px 20px;
+}

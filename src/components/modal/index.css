@@ -1,0 +1,100 @@
+.modal {
+  @apply fixed inset-0 z-50 flex items-center justify-center invisible opacity-0 transition-all duration-300;
+  font-family: var(--font-family-component);
+}
+
+.modal-open {
+  @apply visible opacity-100;
+}
+
+/* Modal Variants */
+.modal-default {
+  @apply items-center justify-center;
+}
+
+.modal-fullscreen {
+  .modal-container {
+    @apply w-full h-full max-w-none m-0 rounded-none;
+  }
+}
+
+.modal-drawer {
+  @apply items-stretch justify-start;
+  
+  .modal-container {
+    @apply h-full w-80 max-w-sm rounded-r-lg rounded-l-none transform -translate-x-full;
+  }
+  
+  &.modal-open .modal-container {
+    @apply translate-x-0;
+  }
+}
+
+.modal-center {
+  @apply items-center justify-center;
+  
+  .modal-container {
+    @apply transform scale-95;
+  }
+  
+  &.modal-open .modal-container {
+    @apply scale-100;
+  }
+}
+
+/* Modal Sizes */
+.modal-sm .modal-container {
+  @apply max-w-sm;
+}
+
+.modal-md .modal-container {
+  @apply max-w-md;
+}
+
+.modal-lg .modal-container {
+  @apply max-w-lg;
+}
+
+.modal-xl .modal-container {
+  @apply max-w-xl;
+}
+
+.modal-full .modal-container {
+  @apply max-w-full;
+}
+
+/* Modal Parts */
+.modal-overlay {
+  @apply fixed inset-0 bg-black bg-opacity-50 transition-opacity;
+}
+
+.modal-container {
+  @apply relative bg-white rounded-lg shadow-lg overflow-hidden flex flex-col max-h-[90vh] w-full max-w-md mx-auto transition-all;
+}
+
+.modal-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-200;
+}
+
+.modal-body {
+  @apply p-4 overflow-y-auto;
+}
+
+.modal-footer {
+  @apply p-4 border-t border-gray-200 flex justify-end gap-2;
+}
+
+.modal-close {
+  @apply absolute top-3 right-3 p-1 rounded-full text-gray-400 hover:text-gray-500 hover:bg-gray-100 transition-colors;
+}
+
+/* Modal Animations */
+.modal-with-backdrop {
+  .modal-overlay {
+    @apply opacity-0 transition-opacity duration-300;
+  }
+  
+  &.modal-open .modal-overlay {
+    @apply opacity-100;
+  }
+}

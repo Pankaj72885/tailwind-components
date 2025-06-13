@@ -1,0 +1,28 @@
+[install]
+# Configure package manager behavior
+cache = true
+exact = false
+globalDir = "~/.bun/install/global"
+globalBinDir = "~/.bun/bin"
+registry = "https://registry.npmjs.org"
+scopes = {}
+optional = true
+dev = true
+peer = false
+production = false
+lockfile = true
+dryRun = false
+save = true
+
+[install.print]
+format = "yarn"
+
+[test]
+coverage = true
+coverageDir = "coverage"
+preload = ["./tests/setup.ts"]
+
+[build]
+target = "bun"
+minify = true
+splitting = true

@@ -1,0 +1,81 @@
+/* Button Variant Combinations */
+
+/* Soft Variants */
+.btn-primary.btn-soft {
+  @apply bg-primary-100 text-primary-800 hover:bg-primary-200;
+}
+
+.btn-secondary.btn-soft {
+  @apply bg-gray-100 text-gray-800 hover:bg-gray-200;
+}
+
+.btn-danger.btn-soft {
+  @apply bg-danger-100 text-danger-800 hover:bg-danger-200;
+}
+
+.btn-success.btn-soft {
+  @apply bg-success-100 text-success-800 hover:bg-success-200;
+}
+
+.btn-warning.btn-soft {
+  @apply bg-warning-100 text-warning-800 hover:bg-warning-200;
+}
+
+.btn-info.btn-soft {
+  @apply bg-info-100 text-info-800 hover:bg-info-200;
+}
+
+/* Elevated Variants */
+.btn-elevated {
+  @apply shadow-md hover:shadow-lg;
+}
+
+/* Rounded Variants */
+.btn-rounded {
+  @apply rounded-full;
+}
+
+/* Animated Variants */
+.btn-animated {
+  @apply transition-all duration-300 transform hover:scale-105;
+}
+
+/* Gradient Variants */
+.btn-gradient-primary {
+  @apply bg-gradient-to-r from-primary-500 to-primary-700 hover:from-primary-600 hover:to-primary-800;
+}
+
+.btn-gradient-success {
+  @apply bg-gradient-to-r from-success-500 to-success-700 hover:from-success-600 hover:to-success-800;
+}
+
+.btn-gradient-danger {
+  @apply bg-gradient-to-r from-danger-500 to-danger-700 hover:from-danger-600 hover:to-danger-800;
+}
+
+/* Icon Positioning */
+.btn-icon-left {
+  @apply flex-row-reverse;
+}
+
+.btn-icon-right {
+  @apply flex-row;
+}
+
+/* Special Effects */
+.btn-glow {
+  @apply relative overflow-hidden;
+  
+  &::before {
+    content: '';
+    @apply absolute inset-0 bg-white opacity-0 transition-opacity;
+  }
+  
+  &:hover::before {
+    @apply opacity-20;
+  }
+}
+
+.btn-shadow-glow {
+  @apply shadow-glow hover:shadow-glow-lg transition-shadow;
+}

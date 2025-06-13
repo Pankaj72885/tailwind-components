@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tailwind CSS Components - Basic Example</title>
+  <link rel="stylesheet" href="../dist/styles.css">
+  <style>
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      margin: 0;
+      padding: 2rem;
+      background-color: #f9fafb;
+      color: #1f2937;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section {
+      margin-bottom: 3rem;
+    }
+    .component-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1.5rem;
+    }
+    .component-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      margin-top: 1.5rem;
+      align-items: center;
+    }
+    .dark-mode-toggle {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      z-index: 10;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Tailwind CSS Components</h1>
+    <p>A collection of reusable UI components built with Tailwind CSS.</p>
+
+    <button id="dark-mode-toggle" class="btn btn-outline btn-sm dark-mode-toggle">
+      Toggle Dark Mode
+    </button>
+
+    <!-- Buttons Section -->
+    <div class="section">
+      <h2>Buttons</h2>
+      <div class="component-row">
+        <button class="btn btn-primary">Primary</button>
+        <button class="btn btn-secondary">Secondary</button>
+        <button class="btn btn-outline">Outline</button>
+        <button class="btn btn-ghost">Ghost</button>
+        <button class="btn btn-danger">Danger</button>
+        <button class="btn btn-success">Success</button>
+        <button class="btn btn-warning">Warning</button>
+        <button class="btn btn-info">Info</button>
+      </div>
+
+      <h3>Button Sizes</h3>
+      <div class="component-row">
+        <button class="btn btn-primary btn-xs">Extra Small</button>
+        <button class="btn btn-primary btn-sm">Small</button>
+        <button class="btn btn-primary">Medium</button>
+        <button class="btn btn-primary btn-lg">Large</button>
+        <button class="btn btn-primary btn-xl">Extra Large</button>
+      </div>
+
+      <h3>Button States</h3>
+      <div class="component-row">
+        <button class="btn btn-primary">Default</button>
+        <button class="btn btn-primary btn-loading">Loading</button>
+        <button class="btn btn-primary" disabled>Disabled</button>
+        <button class="btn btn-primary btn-icon">
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12h14"></path>
+            <path d="M12 5l7 7-7 7"></path>
+          </svg>
+          With Icon
+        </button>
+      </div>
+
+      <h3>Button Variants</h3>
+      <div class="component-row">
+        <button class="btn btn-primary btn-soft">Soft</button>
+        <button class="btn btn-primary btn-elevated">Elevated</button>
+        <button class="btn btn-primary btn-rounded">Rounded</button>
+        <button class="btn btn-primary btn-animated">Animated</button>
+        <button class="btn btn-primary btn-gradient">Gradient</button>
+        <button class="btn btn-primary btn-glow">Glow</button>
+      </div>
+    </div>
+
+    <!-- Cards Section -->
+    <div class="section">
+      <h2>Cards</h2>
+      <div class="component-grid">
+        <div class="card card-default p-md">
+          <div class="card-header">Default Card</div>
+          <div class="card-body">This is a default card with medium padding.</div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+
+        <div class="card card-elevated p-md">
+          <div class="card-header">Elevated Card</div>
+          <div class="card-body">This card has an elevated appearance with a shadow.</div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+
+        <div class="card card-outlined p-md">
+          <div class="card-header">Outlined Card</div>
+          <div class="card-body">This card has an outline instead of a shadow.</div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+
+        <div class="card card-interactive p-md">
+          <div class="card-header">Interactive Card</div>
+          <div class="card-body">This card has hover and active states.</div>
+          <div class="card-footer">
+            <button class="btn btn-primary btn-sm">Action</button>
+          </div>
+        </div>
+      </div>
+
+      <h3>Card Variants</h3>
+      <div class="component-grid">
+        <div class="card card-default card-horizontal p-md">
+          <div class="card-image" style="background-color: #dbeafe; min-height: 100px;"></div>
+          <div>
+            <div class="card-header">Horizontal Card</div>
+            <div class="card-body">Card with horizontal layout.</div>
+          </div>
+        </div>
+
+        <div class="card card-default card-compact p-md">
+          <div class="card-header">Compact Card</div>
+          <div class="card-body">This card has reduced spacing.</div>
+        </div>
+
+        <div class="card card-default card-gradient p-md">
+          <div class="card-header">Gradient Card</div>
+          <div class="card-body">This card has a gradient background.</div>
+        </div>
+
+        <div class="card card-default card-glass p-md">
+          <div class="card-header">Glass Card</div>
+          <div class="card-body">This card has a glass morphism effect.</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Badges Section -->
+    <div class="section">
+      <h2>Badges</h2>
+      <div class="component-row">
+        <span class="badge badge-primary">Primary</span>
+        <span class="badge badge-secondary">Secondary</span>
+        <span class="badge badge-success">Success</span>
+        <span class="badge badge-danger">Danger</span>
+        <span class="badge badge-warning">Warning</span>
+        <span class="badge badge-info">Info</span>
+      </div>
+
+      <h3>Badge Sizes</h3>
+      <div class="component-row">
+        <span class="badge badge-primary badge-sm">Small</span>
+        <span class="badge badge-primary">Medium</span>
+        <span class="badge badge-primary badge-lg">Large</span>
+      </div>
+
+      <h3>Badge Variants</h3>
+      <div class="component-row">
+        <span class="badge badge-primary badge-dot">With Dot</span>
+        <span class="badge badge-primary badge-removable">Removable
+          <button class="badge-remove-btn">&times;</button>
+        </span>
+      </div>
+    </div>
+
+    <!-- Inputs Section -->
+    <div class="section">
+      <h2>Inputs</h2>
+      <div class="component-grid">
+        <div class="input-group">
+          <label class="input-label">Default Input</label>
+          <input type="text" class="input input-default" placeholder="Enter text">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Success Input</label>
+          <input type="text" class="input input-success" value="Correct value">
+          <div class="input-helper-text">This input has a valid value.</div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Error Input</label>
+          <input type="text" class="input input-error" value="Incorrect value">
+          <div class="input-helper-text">This input has an invalid value.</div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Disabled Input</label>
+          <input type="text" class="input input-disabled" disabled value="Disabled input">
+        </div>
+      </div>
+
+      <h3>Input Variants</h3>
+      <div class="component-grid">
+        <div class="input-group">
+          <label class="input-label">Filled Input</label>
+          <input type="text" class="input input-default input-filled" placeholder="Filled input">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Underlined Input</label>
+          <input type="text" class="input input-default input-underlined" placeholder="Underlined input">
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Input with Icon</label>
+          <div class="input-with-icon">
+            <input type="text" class="input input-default" placeholder="Search...">
+            <div class="input-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <div class="input-group">
+          <label class="input-label">Floating Label</label>
+          <div class="input-floating-label">
+            <input type="text" class="input input-default" id="floating-input" placeholder=" ">
+            <label for="floating-input">Floating label</label>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal Demo -->
+    <div class="section">
+      <h2>Modals</h2>
+      <div class="component-row">
+        <button id="open-default-modal" class="btn btn-primary">Open Default Modal</button>
+        <button id="open-center-modal" class="btn btn-secondary">Open Center Modal</button>
+        <button id="open-fullscreen-modal" class="btn btn-outline">Open Fullscreen Modal</button>
+        <button id="open-drawer-modal" class="btn btn-ghost">Open Drawer Modal</button>
+      </div>
+
+      <!-- Default Modal -->
+      <div id="default-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container modal-default modal-md">
+          <div class="modal-header">
+            <h3>Default Modal</h3>
+            <button class="modal-close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>This is a default modal with medium size.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-ghost modal-cancel-btn">Cancel</button>
+            <button class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Center Modal -->
+      <div id="center-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container modal-center modal-sm">
+          <div class="modal-header">
+            <h3>Center Modal</h3>
+            <button class="modal-close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>This is a centered modal with small size.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-ghost modal-cancel-btn">Cancel</button>
+            <button class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Fullscreen Modal -->
+      <div id="fullscreen-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container modal-fullscreen">
+          <div class="modal-header">
+            <h3>Fullscreen Modal</h3>
+            <button class="modal-close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>This is a fullscreen modal that takes up the entire viewport.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-ghost modal-cancel-btn">Cancel</button>
+            <button class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Drawer Modal -->
+      <div id="drawer-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-container modal-drawer modal-lg">
+          <div class="modal-header">
+            <h3>Drawer Modal</h3>
+            <button class="modal-close-btn">&times;</button>
+          </div>
+          <div class="modal-body">
+            <p>This is a drawer modal that slides in from the side.</p>
+          </div>
+          <div class="modal-footer">
+            <button class="btn btn-ghost modal-cancel-btn">Cancel</button>
+            <button class="btn btn-primary">Confirm</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    // Dark mode toggle
+    const darkModeToggle = document.getElementById('dark-mode-toggle');
+    darkModeToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+
+    // Modal functionality
+    function setupModal(triggerButtonId, modalId) {
+      const triggerButton = document.getElementById(triggerButtonId);
+      const modal = document.getElementById(modalId);
+      const overlay = modal.querySelector('.modal-overlay');
+      const closeButton = modal.querySelector('.modal-close-btn');
+      const cancelButton = modal.querySelector('.modal-cancel-btn');
+
+      triggerButton.addEventListener('click', () => {
+        modal.classList.add('modal-open');
+        document.body.style.overflow = 'hidden';
+      });
+
+      function closeModal() {
+        modal.classList.remove('modal-open');
+        document.body.style.overflow = '';
+      }
+
+      overlay.addEventListener('click', closeModal);
+      closeButton.addEventListener('click', closeModal);
+      if (cancelButton) cancelButton.addEventListener('click', closeModal);
+    }
+
+    // Setup all modals
+    setupModal('open-default-modal', 'default-modal');
+    setupModal('open-center-modal', 'center-modal');
+    setupModal('open-fullscreen-modal', 'fullscreen-modal');
+    setupModal('open-drawer-modal', 'drawer-modal');
+  </script>
+</body>
+</html>

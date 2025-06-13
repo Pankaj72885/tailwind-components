@@ -1,0 +1,79 @@
+/* Input Variant Combinations */
+
+/* Filled Input */
+.input-filled {
+  @apply bg-gray-100 border-transparent focus:bg-white;
+}
+
+/* Underlined Input */
+.input-underlined {
+  @apply border-0 border-b border-gray-300 rounded-none px-0 focus:ring-0;
+}
+
+/* Floating Label Input */
+.input-floating {
+  @apply pt-6 pb-2;
+  
+  & + .input-label {
+    @apply absolute left-3 top-2 text-xs text-gray-500 transition-all;
+  }
+  
+  &:placeholder-shown + .input-label {
+    @apply top-1/2 -translate-y-1/2 text-sm text-gray-400;
+  }
+  
+  &:focus + .input-label {
+    @apply top-2 text-xs text-primary-600;
+  }
+}
+
+/* Search Input */
+.input-search {
+  @apply pl-10 pr-10 rounded-full;
+  
+  & + .input-icon-search {
+    @apply left-3;
+  }
+  
+  & + .input-icon-clear {
+    @apply right-3 left-auto cursor-pointer;
+  }
+}
+
+/* Pill Input */
+.input-pill {
+  @apply rounded-full;
+}
+
+/* Input with Inner Shadow */
+.input-inner-shadow {
+  @apply shadow-inner-lg;
+}
+
+/* Input with Glow Effect */
+.input-glow:focus {
+  @apply shadow-glow;
+}
+
+/* Input with Animated Border */
+.input-animated {
+  @apply relative border-0 bg-transparent;
+  
+  &::after {
+    content: '';
+    @apply absolute left-0 right-0 bottom-0 h-0.5 bg-primary-500 transform scale-x-0 transition-transform origin-left;
+  }
+  
+  &:focus::after {
+    @apply scale-x-100;
+  }
+}
+
+/* Input with Character Count */
+.input-with-counter {
+  @apply mb-6;
+  
+  & ~ .input-counter {
+    @apply absolute right-0 bottom-0 text-xs text-gray-500 -mb-5;
+  }
+}

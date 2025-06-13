@@ -1,0 +1,79 @@
+.card {
+  @apply flex flex-col overflow-hidden rounded-lg bg-white;
+  font-family: var(--font-family-component);
+}
+
+/* Card Variants */
+.card-default {
+  @apply border border-gray-200;
+}
+
+.card-elevated {
+  @apply shadow-md;
+}
+
+.card-outlined {
+  @apply border border-gray-300;
+}
+
+.card-interactive {
+  @apply border border-gray-200 transition-all duration-200 hover:shadow-md hover:border-gray-300 cursor-pointer;
+}
+
+/* Card Padding */
+.card-padding-none {
+  .card-body,
+  .card-header,
+  .card-footer {
+    @apply p-0;
+  }
+}
+
+.card-padding-sm {
+  .card-body,
+  .card-header,
+  .card-footer {
+    @apply p-3;
+  }
+}
+
+.card-padding-md {
+  .card-body,
+  .card-header,
+  .card-footer {
+    @apply p-4;
+  }
+}
+
+.card-padding-lg {
+  .card-body,
+  .card-header,
+  .card-footer {
+    @apply p-6;
+  }
+}
+
+/* Card Parts */
+.card-header {
+  @apply flex items-center justify-between p-4 border-b border-gray-200;
+}
+
+.card-body {
+  @apply flex-1 p-4;
+}
+
+.card-footer {
+  @apply p-4 border-t border-gray-200;
+}
+
+.card-image {
+  @apply w-full h-48 object-cover;
+}
+
+.card-title {
+  @apply text-lg font-semibold text-gray-900 mb-2;
+}
+
+.card-text {
+  @apply text-sm text-gray-600;
+}
